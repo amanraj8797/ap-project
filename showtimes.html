@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Showtimes</title>
+</head>
+<body>
+    <h1>Showtimes for {{ movie.title }}</h1>
+    <ul>
+        {% for showtime in showtimes %}
+        <li>
+            <a href="{{ url_for('book', showtime_id=showtime.id) }}">{{ showtime.showtime }}</a>
+        </li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
